@@ -10,6 +10,10 @@
     tools:context=".MainActivity">
 
     <!-- 방 참여 레이아웃 -->
+
+
+    <!-- 방 만들기 레이아웃 -->
+
     <LinearLayout
         android:id="@+id/joinLayout"
         android:layout_width="match_parent"
@@ -51,9 +55,6 @@
             android:layout_marginTop="10dp"
             app:srcCompat="@mipmap/arrow2" />
     </LinearLayout>
-
-
-    <!-- 방 만들기 레이아웃 -->
 
     <Button
         android:id="@+id/button1"
