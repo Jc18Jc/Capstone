@@ -10,8 +10,6 @@ class CreateActivity : AppCompatActivity() {
     private lateinit var binding : ActivityCreateBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_create)
-
         binding = ActivityCreateBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.menuBottomNavigation.setOnItemSelectedListener { item ->
