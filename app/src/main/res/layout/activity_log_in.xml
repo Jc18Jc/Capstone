@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogInActivity">
+    tools:context=".Login.LogInActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -72,7 +72,6 @@
         android:gravity="center"
         android:includeFontPadding="false"
         android:text="로그인"
-        android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

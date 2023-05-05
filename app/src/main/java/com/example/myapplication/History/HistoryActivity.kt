@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.History
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -13,12 +13,12 @@ class HistoryActivity : AppCompatActivity() {
         binding = ActivityHistoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.menuBottomNavigation.setOnItemSelectedListener { item ->
+        /*binding.menuBottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_home -> startActivity(Intent(this, MainActivity::class.java))
                 R.id.menu_user -> startActivity(Intent(this, UserActivity::class.java))
             }
             true
-        }
+        }*/
     }
 }
