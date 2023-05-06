@@ -26,8 +26,8 @@ class LogInActivity : AppCompatActivity() {
             startActivity(Intent(this, SignUpActivity::class.java))
         }
         binding.logInBtn.setOnClickListener {
-            val email = binding.idInputEditText.text.toString()
-            val password=binding.pwInputEditText.text.toString()
+            var email = binding.idInputEditText.text.toString()
+            var password=binding.pwInputEditText.text.toString()
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
