@@ -1,40 +1,35 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.FrameLayout
-import androidx.fragment.app.Fragment
-import com.example.myapplication.History.HistoryFragment
-import com.example.myapplication.MainScreen.MainFragment
-import com.example.myapplication.User.UserFragment
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import android.widget.TextView
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
-
-    private val fl: FrameLayout by lazy {
-        findViewById(R.id.layout)
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        replaceFragment(MainFragment())
-
-        binding.bottomNavigationView.setOnItemSelectedListener {
-            replaceFragment(
-                when (it.itemId) {
-                    R.id.menu_history -> HistoryFragment()
-                    R.id.menu_user-> UserFragment()
-                    else -> MainFragment()
-                }
-            )
+        binding.menuBottomNavigation.setOnItemSelectedListener { item ->
+            when(item.itemId) {
+                R.id.menu_history -> startActivity(Intent(this,HistoryActivity::class.java))
+                R.id.menu_user -> startActivity(Intent(this, UserActivity::class.java))
+            }
             true
         }
-    }
-    private fun replaceFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().replace(fl.id, fragment).commit()
+
+        binding.createLayout.setOnClickListener { startActivity(Intent(this,CreateActivity::class.java)) }
+        binding.joinLayout.setOnClickListener { startActivity(Intent(this,JoinActivity::class.java)) }
+        binding.selectBookmarkLayout.setOnClickListener { startActivity(Intent(this,SelectBookmarkActivity::class.java)) }
+
+
     }
 }
