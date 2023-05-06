@@ -1,16 +1,11 @@
-package com.example.myapplication
+package com.example.myapplication.Login
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.example.myapplication.databinding.ActivitySignUpBinding
-import com.example.myapplication.databinding.ActivityUserBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class SignUpActivity : AppCompatActivity() {
@@ -26,10 +21,6 @@ class SignUpActivity : AppCompatActivity() {
 
         binding.backButton.setOnClickListener {
             finish()
-        }
-
-        binding.checkIdButton.setOnClickListener {
-
         }
 
         binding.signUpButton.setOnClickListener {

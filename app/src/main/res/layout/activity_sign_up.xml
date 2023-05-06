@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SignUpActivity">
+    tools:context=".Login.SignUpActivity">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -14,10 +14,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:background="@color/white"
-        android:tint="@color/blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        app:tint="@color/blue" />
 
     <TextView
         android:id="@+id/textView16"
@@ -140,7 +140,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
-    <Button
+    <!-- <Button
         android:id="@+id/checkIdButton"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
@@ -152,6 +152,7 @@
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/idTextView"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
+      -->
 
     <Button
         android:id="@+id/signUpButton"
