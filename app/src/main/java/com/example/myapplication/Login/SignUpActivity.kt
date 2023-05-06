@@ -23,10 +23,6 @@ class SignUpActivity : AppCompatActivity() {
             finish()
         }
 
-        binding.checkIdButton.setOnClickListener {
-
-        }
-
         binding.signUpButton.setOnClickListener {
             var name = binding.nameTextView.text
             var id = binding.idTextView.text
