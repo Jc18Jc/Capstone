@@ -12,36 +12,37 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".SignUpActivity"
+            android:name=".Login.LogInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login.SignUpActivity"
+            android:exported="false" />
+        <!--
+                <activity
+            android:name=".MainScreen.RoomStateActivity"
+            android:exported="false" />
+        -->
+        <activity
+            android:name=".MainScreen.SelectBookmarkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainScreen.JoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainScreen.CreateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".History.HistoryActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".RoomStateActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SelectBookmarkActivity"
-            android:exported="false" />
-        <activity
-            android:name=".JoinActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CreateActivity"
-            android:exported="false" />
-        <activity
-            android:name=".UserActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HistoryActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".LogInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
