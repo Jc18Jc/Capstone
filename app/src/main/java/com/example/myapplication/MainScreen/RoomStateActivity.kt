@@ -1,36 +1,32 @@
-package com.example.myapplication
+package com.example.myapplication.MainScreen
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.databinding.ActivitySelectBookmarkBinding
+import com.example.myapplication.DTO.Bookmark
+import com.example.myapplication.R
+import com.example.myapplication.databinding.ActivityRoomStateBinding
 
-class SelectBookmarkActivity : AppCompatActivity() {
-    private lateinit var binding : ActivitySelectBookmarkBinding
+class RoomStateActivity : AppCompatActivity() {
+    private lateinit var binding : ActivityRoomStateBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySelectBookmarkBinding.inflate(layoutInflater)
+        binding = ActivityRoomStateBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        binding.menuBottomNavigation.setOnItemSelectedListener { item ->
+        /*binding.menuBottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_home -> startActivity(Intent(this, MainActivity::class.java))
                 R.id.menu_history -> startActivity(Intent(this,HistoryActivity::class.java))
                 R.id.menu_user -> startActivity(Intent(this, UserActivity::class.java))
             }
             true
-        }
-
+        }*/
         val listItems=ArrayList<Bookmark>()
-
         val a = Bookmark(1, "인천대입구역", "인천대학교 송도캠퍼스", 5000, 15)
         val b = Bookmark(2, "인천대입구역", "인천대학교 송도캠퍼스", 6000, 15)
         val c = Bookmark(3, "인천대입구역", "인천대학교 송도캠퍼스", 7000, 15)
@@ -50,16 +46,14 @@ class SelectBookmarkActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
     class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        var numberTextView:TextView = itemView.findViewById(R.id.numberTextView)
-        var startTextView:TextView = itemView.findViewById(R.id.startTextView)
-        var destinationTextView:TextView = itemView.findViewById(R.id.destinationTextView)
-        var costTextView:TextView = itemView.findViewById(R.id.costTextView)
-        var timeTextView:TextView = itemView.findViewById(R.id.timeTextView)
+        var startTextView: TextView = itemView.findViewById(R.id.startTextView)
+        var destinationTextView: TextView = itemView.findViewById(R.id.destinationTextView)
     }
+
     class MyAdapter(var list:ArrayList<Bookmark>): RecyclerView.Adapter<MyViewHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
             val inflater = LayoutInflater.from(parent.context)
-            val view = inflater.inflate(R.layout.bookmark_item, parent, false)
+            val view = inflater.inflate(R.layout.incomplete_item, parent, false)
             return MyViewHolder(view)
         }
 
@@ -68,12 +62,11 @@ class SelectBookmarkActivity : AppCompatActivity() {
         }
 
         override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-            holder.numberTextView.text=list[position].number.toString()
             holder.startTextView.text=list[position].start
             holder.destinationTextView.text=list[position].destination
-            holder.costTextView.text=list[position].cost.toString()
-            holder.timeTextView.text=list[position].time.toString()
 
         }
     }
+
+
 }

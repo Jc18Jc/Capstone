@@ -4,16 +4,19 @@
     <item
         android:id="@+id/menu_home"
         android:icon="@mipmap/home"
+        android:enabled="true"
         android:title="홈"/>
 
     <item
         android:id="@+id/menu_history"
         android:icon="@mipmap/list"
+        android:enabled="true"
         android:title="여정 내역"/>
 
     <item
         android:id="@+id/menu_user"
         android:icon="@mipmap/user"
+        android:enabled="true"
         android:title="계정"/>
 
 </menu>
