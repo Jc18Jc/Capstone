@@ -9,17 +9,30 @@
     tools:context=".MainScreen.SelectBookmarkActivity">
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="150dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_weight="0.1"
-        android:background="@color/light_gray"
-        android:scaleType="fitCenter"
+        android:id="@+id/backButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/bookmark" />
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        app:tint="@color/blue" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="즐겨찾기"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -37,8 +50,7 @@
         android:layout_marginStart="60dp"
         android:background="@drawable/button_design"
         android:text="방 만들기"
-        android:textColor="@color/black"
-        android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="643dp" />
 
@@ -49,8 +61,7 @@
         android:layout_marginEnd="60dp"
         android:background="@drawable/button_design"
         android:text="방 찾기"
-        android:textColor="@color/black"
-        android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="643dp" />
 

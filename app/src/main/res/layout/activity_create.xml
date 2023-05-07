@@ -14,7 +14,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +28,8 @@
         android:layout_marginTop="20dp"
         android:text="방 만들기"
         android:textColor="@color/blue"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -156,17 +157,21 @@
 
     <Button
         android:id="@+id/createButton2"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginBottom="40dp"
         android:background="@drawable/button_design"
         android:text="만들기"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
