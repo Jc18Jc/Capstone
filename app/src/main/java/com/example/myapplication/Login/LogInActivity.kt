@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.myapplication.Login.SignUpActivity
 import com.example.myapplication.MainActivity
 import com.example.myapplication.databinding.ActivityLogInBinding
+import com.example.myapplication.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -22,7 +24,7 @@ class LogInActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        binding.joinSignUpButton.setOnClickListener {
+        binding.signUpBtn.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
         }
         binding.logInBtn.setOnClickListener {

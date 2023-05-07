@@ -11,7 +11,6 @@ import com.google.firebase.ktx.Firebase
 class SignUpActivity : AppCompatActivity() {
     private lateinit var binding : ActivitySignUpBinding
     private lateinit var auth: FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
@@ -19,22 +18,30 @@ class SignUpActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
+        var name = binding.nameTextView.text
+        var id = ""
+        var password1 = ""
+        var password2 = ""
+
         binding.backButton.setOnClickListener {
             finish()
         }
 
         binding.signUpButton.setOnClickListener {
-            var name = binding.nameTextView.text
-            var id = binding.idTextView.text
-            var password1 = binding.passwordTextView1.text
-            var password2 = binding.passwordTextView1.text
-            auth?.createUserWithEmailAndPassword(id.toString(), password1.toString())?.addOnCompleteListener { task->
-                //정상적으로 이메일과 비번이 전달되어
-                //새 유저 계정을 생성과 서버db 저장 완료 및 로그인
-                //즉, 기존에 있는 계정이 아니다!
-                if(password1.equals(password2)) {
+
+            id = binding.idTextView.text.toString()
+            password1 = binding.passwordTextView1.text.toString()
+            password2 = binding.passwordTextView2.text.toString()
+
+            auth?.createUserWithEmailAndPassword(id, password1)?.addOnCompleteListener { task->
+                // 비밀번호와 비밀번호 재입력이 일치하지 않는다
+                if(!password1.equals(password2)) {
                     Toast.makeText(this, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
                 }
+
+                //정상적으로 이메일과 비번이 전달되어
+                //새 유저 계정을 생성과 서버db 저장 완료 및 로그인
+                //즉, 기존에 있는 계정이 아니다
                 else if(task.isSuccessful) {
                     Toast.makeText(this, "회원가입이 완료되었습다.", Toast.LENGTH_SHORT).show()
                     finish()
