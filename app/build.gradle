@@ -67,5 +67,23 @@ dependencies {
 
     // firebase firestore-storage
     implementation 'com.google.firebase:firebase-storage'
+
+    // 위치 정보
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    // 구글 지도, MapsActivity 추가 시 자동으로 추가됨
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
+    implementation("com.google.android.gms:play-services-location:16.0.0")
+
+    // spinner
+    implementation "com.github.skydoves:powerspinner:1.2.4"
+
+    // kakao
+    implementation "com.kakao.sdk:v2-all:2.11.0" // 전체 모듈 설치, 2.11.0 버전부터 지원
+
+    // 카카오 로그인
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.google.code.gson:gson:2.8.8'
+
 }
 
