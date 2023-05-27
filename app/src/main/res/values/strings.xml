@@ -2,4 +2,21 @@
     <string name="app_name">My Application</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    !-- Kakao KEY설정[AndroidManifest.xml에도 설정]-->
+    <!-- Kakao-init에서 사용 -->
+    <string name="kakao_app_key">9d10a98c1b620d599aae6bddf535e549</string>
+    <!-- AndroidManifest.xml에서 사용 -->
+    <string name="kakao_app_key2">kakao9d10a98c1b620d599aae6bddf535e549</string>
+
+    <string name="edittext_hint_email"><font size="15">이메일을 입력하세요</font></string>
+    <string name="edittext_hint_nickname"><font size="15">닉네임을 입력하세요</font></string>
+    <string name="edittext_hint_password"><font size="15">비밀번호를 입력하세요</font></string>
+    <string name="edittext_hint_password_check"><font size="15">비밀번호를 재입력하세요</font></string>
+    <string name="edittext_hint_phone_number"><font size="15">전화번호를 입력하세요</font></string>
+    <string name="edittext_hint_phone_number_check"><font size="15">인증번호를 입력하세요</font></string>
+    <string name="edittext_hint"><font size="15">Hint here!</font></string>
+
+    <string name="searchView_hint"><font size="13">출발지 혹은 도착지를 검색해주세요</font></string>
+
 </resources>

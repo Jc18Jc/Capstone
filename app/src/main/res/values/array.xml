@@ -8,6 +8,13 @@
     </string-array>
 
     <string-array name="number">
+        <item>1명</item>
+        <item>2명</item>
+        <item>3명</item>
+        <item>4명</item>
+    </string-array>
+
+    <string-array name="spinner_create_room">
         <item>1</item>
         <item>2</item>
         <item>3</item>
