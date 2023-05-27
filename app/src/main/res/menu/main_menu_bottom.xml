@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/make_room"
+        android:icon="@drawable/baseline_add_box_24"
+        android:enabled="true"
+        android:title="방만들기"/>
+
+    <item
+        android:id="@+id/chat_room"
+        android:icon="@drawable/baseline_chat_bubble_24"
+        android:enabled="true"
+        android:title="채팅방"/>
 
     <item
         android:id="@+id/menu_home"
@@ -11,12 +22,11 @@
         android:id="@+id/menu_history"
         android:icon="@mipmap/list"
         android:enabled="true"
-        android:title="여정 내역"/>
+        android:title="이용내역"/>
 
     <item
         android:id="@+id/menu_user"
-        android:icon="@mipmap/user"
+        android:icon="@drawable/baseline_more_horiz_24"
         android:enabled="true"
-        android:title="계정"/>
-
+        android:title="더보기"/>
 </menu>
