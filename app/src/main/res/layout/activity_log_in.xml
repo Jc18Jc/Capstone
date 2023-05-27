@@ -15,8 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/icuniversity"
-        />
+        app:srcCompat="@drawable/fire" />
 
     <EditText
         android:id="@+id/idInputEditText"
@@ -28,6 +27,7 @@
         android:background="@drawable/text_box_design"
         android:hint="이메일 주소 또는 아이디"
         android:includeFontPadding="false"
+        android:inputType="textEmailAddress"
         android:paddingLeft="16dp"
         android:textColor="@color/black"
         android:textColorHint="@color/light_gray"
@@ -46,6 +46,7 @@
         android:background="@drawable/text_box_design"
         android:hint="비밀번호"
         android:includeFontPadding="false"
+        android:inputType="textPassword"
         android:paddingLeft="16dp"
         android:textColor="@color/black"
         android:textColorHint="@color/light_gray"
@@ -99,10 +100,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="40dp"
-        android:background="@drawable/box_design"
+        android:background="@drawable/box_design_chat_room_info"
         android:gravity="center"
         android:includeFontPadding="false"
-        android:text="화원가입"
+        android:text="회원가입"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
